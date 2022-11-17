@@ -27,12 +27,12 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[credentialsId: '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',url: 'https://github.com/interns7/react-testing-library-examples-main.git']]
+                    userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
                 ])
             }
         }
 
-        stage(' Unit Testing') {
+        stage(' Unit Testings') {
             steps {
                 sh '''
                 echo "Running Unit Tests"
