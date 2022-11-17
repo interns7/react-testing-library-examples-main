@@ -22,15 +22,15 @@ pipeline {
             }
         }
 
-        stage('Code Checkout') {
-            steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/dev']],
-                    userRemoteConfigs: [[url: 'https://github.com/interns7/react-testing-library-examples-main.git']]
-                ])
-            }
-        }
+        // stage('Code Checkout') {
+        //     steps {
+        //         checkout([
+        //             $class: 'GitSCM',
+        //             branches: [[name: '*/dev']],
+        //             userRemoteConfigs: [[url: 'https://github.com/interns7/react-testing-library-examples-main.git']]
+        //         ])
+        //     }
+        // }
 
         stage(' Unit Testing') {
             steps {
