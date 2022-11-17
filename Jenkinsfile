@@ -26,7 +26,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/main']],
+                    branches: [[name: '*/dev']],
                     userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
                 ])
             }
