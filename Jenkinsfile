@@ -27,7 +27,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
+                    userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
                 ])
             }
         }
