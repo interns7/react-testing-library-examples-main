@@ -24,11 +24,15 @@ pipeline {
 
         stage('Code Checkout') {
             steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
-                ])
+                // checkout([
+                //     $class: 'GitSCM',
+                //     branches: [[name: '*/main']],
+                //     userRemoteConfigs: [[url: 'https://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@github.com/interns7/react-testing-library-examples-main.git']]
+                // ])
+                script {
+                    cleanWs()
+                    git clone -b 'dev' 'https://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@github.com/interns7/react-testing-library-examples-main.git'
+                }
             }
         }
 
